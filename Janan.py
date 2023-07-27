@@ -165,7 +165,7 @@ def public_menu():
 	try:
 		koh2 = requests.get('https://graph.facebook.com/v2.0/'+pil+'?fields=friends.limit(5000)&access_token='+tokenku[0]).json()
 		for pi in koh2['friends']['data']:
-			id.append(pi['id']+'|'+pi['Saadat])
+			id.append(pi['id']+'|'+pi[Saadat])
 		print(' [] Total : '+str(len(id)))
 		setting()
 	except requests.exceptions.ConnectionError:
