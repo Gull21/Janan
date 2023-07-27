@@ -456,8 +456,8 @@ class Main:
 		print(" \033[1;94m[1] File Cloning ")
 		print(" \033[1;32m[2] Public Cloning")
 		print(" \33[1;32m[3] AFG Random Cloning")
-		print(" \033[1;94m[4] 2004 To 2015 ")
-		print(" \33[1;94m[5]AFG Mix ids 2015 To 2023 ")
+		print(" \033[1;94m[4] 2004 To 2011 ")
+		print(" \33[1;94m[5]AFG Mix ids 2011 To 2015 ")
 		print("\033[1;32m [E] Exit \n")
 		UZAIR =input(" \033[1;91mCHOOSE : ")
 		if UZAIR in ["1", "01"]:
@@ -481,7 +481,7 @@ class Main:
 		xx = 999999999
 		idx = "100000" 
 		os.system('clear');print(logo)
-		limit = int(input(" \n\033[0;95m[+]\033[1;32m TOTAL IDS TO CRACK LIMIT 1000,2000,3000,500,1000,50,000... "))
+		limit = int(input(" \n\033[0;95m[+]\033[1;32m TOTAL IDS TO CRACK LIMIT 50,000... "))
 		try:
 			for n in range(limit):
 				_ = random.randint(x,xx)
@@ -490,13 +490,8 @@ class Main:
 			
 			print("\033[1;32m [+] TOTAL ID -> \033[0;91m%s\033[0;97m"%(len(self.id))) 
 			with ThreadPoolExecutor(max_workers=30) as coeg:
-				print("\n\033[1;32m [!] Ex(123456-1234567-123456789) FOR Old IDZ\033[1;37m ")
-				print("\n\033[1;93m [2] Ex(afghan123-khan123-afghanistan-kabul123...) AFG Mix IDZ\033[1;37m ")
+				print("\n\033[1;32m [!] Ex(123456) FOR Old IDZ\033[1;37m ")
 				listpass = input("%s [1] ENTER PASSWORD :%s "%(G,Y))
-				listpass = input("%s [2] ENTER PASSWORD :%s "%(G,Y))
-				listpass = input("%s [2] ENTER PASSWORD :%s "%(G,Y))
-				listpass = input("%s [2] ENTER PASSWORD :%s "%(G,Y))
-				listpass = input("%s [2] ENTER PASSWORD :%s "%(G,Y))
 				if len(listpass)<=5:
 					exit("\n%s [!] PASSWORD MINIMUM 6-10 CHARACTERS"%(B))
 				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(G,listpass))
@@ -556,7 +551,7 @@ class Main:
 		xx = 9999999999
 		idx = "10000" 
 		os.system('clear');print(logo)
-		limit = int(input("\n \033[0;95m[+]\033[1;32m TOTAL IDS TO CRACK LIMIT 1000,2000,3000,500,1000,50,000... "))
+		limit = int(input("\n \033[0;95m[+]\033[1;32m TOTAL IDS TO CRACK LIMIT 50,000... "))
 		try:
 			for n in range(limit):
 				_ = random.randint(x,xx)
@@ -565,13 +560,8 @@ class Main:
 			
 			print("\033[1;32m [+] TOTAL ID -> \033[0;91m%s\033[0;97m"%(len(self.id))) 
 			with ThreadPoolExecutor(max_workers=30) as coeg:
-				print("\n\033[1;93m [1] Ex(123456-1234567-123456789) FOR Old IDZ\033[1;37m ")
-				print("\n\033[1;93m [2] Ex(afghan123-khan123-afghanistan-kabul123...) AFG Mix IDZ\033[1;37m ")
+				print("\n\033[1;93m [1] Ex(123456) FOR Old IDZ\033[1;37m ")
 				listpass = input("%s [1] ENTER PASSWORD :%s "%(G,Y))
-				listpass = input("%s [2] ENTER PASSWORD :%s "%(G,Y))
-				listpass = input("%s [2] ENTER PASSWORD :%s "%(G,Y))
-				listpass = input("%s [2] ENTER PASSWORD :%s "%(G,Y))
-				listpass = input("%s [2] ENTER PASSWORD :%s "%(G,Y))
 				if len(listpass)<=5:
 					exit("\n%s [!] PASSWORD MINIMUM 6-10 CHARACTERS"%(B))
 				print("%s [*] CRACK WITH PASSWORD -> [\033[0;91m%s\033[0;93m]"%(G,listpass))
