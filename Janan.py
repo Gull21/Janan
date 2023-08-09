@@ -33,7 +33,7 @@ logo = '\n\x1b[1;92m    HAMZA MUNIR OFFICIAL       .SSS\n\x1b[1;92m   HAMZA MUNI
  
 def reg():
     os.system('clear')
-    print 'logo
+    print "
     print ''
     print '\x1b[1;31;1mTake The Free Approval For Login'
     print ''
